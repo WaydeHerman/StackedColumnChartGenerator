@@ -40,29 +40,26 @@
      d3.json("sample.json").then(function(data) {
        data.forEach(function(v) {
         v["Value"] = +v["Value"]
-        v["Fake"] = Math.round(v['Value']*10/2)/10
        })
-        stackedColumnChartViz({
+        /*stackedColumnChartViz({
         el: document.getElementsByClassName("chart")[0],
         data,
         columnBars: "Years",
         columnGrouping: "Age",
-        columnMeasure0: "Value",
-        columnMeasure1: "Fake",
+        columnMeasure: "Value",
         operationMeasure: "sum",
         paletteFill: "pattern",
         positionLegend: "top",
         sort: "atoz",
         labelX: "axis-x-label",
         labelY: "axis-y-label"
-      }); 
+      }); */
         stackedColumnChartViz({
         el: document.getElementsByClassName("chart")[1],
         data,
         columnBars: "Years",
         columnGrouping: "Age",
-        columnMeasure0: "Value",
-        columnMeasure1: "Fake",
+        columnMeasure: "Value",
         operationMeasure: "sum",
         paletteFill: "single",
         positionLegend: "top",
@@ -70,19 +67,19 @@
         labelX: "axis-x-label",
         labelY: "axis-y-label"
       }); 
-        stackedColumnChartViz({
+        /*stackedColumnChartViz({
         el: document.getElementsByClassName("chart")[2],
         data,
-        columnBars: "Years",
-        columnMeasure0: "Value",
-        columnMeasure1: "Fake",
-        operationMeasure: "sum",
+        columnBars: "Age",
+        columnGrouping: "Years",
+        columnMeasure: "Value",
+        operationMeasure: "avg",
         paletteFill: "full",
         positionLegend: "top",
         sort: "atoz",
         labelX: "axis-x-label",
         labelY: "axis-y-label"
-      }); 
+      }); */
      })
 
     </script>
